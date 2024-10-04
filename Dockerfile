@@ -3,7 +3,7 @@ FROM ros:foxy
 # Set environment variable to avoid dialog prompts
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update && apt-get install -y git
+RUN apt-get update && apt-get install -y git terminator
 
 RUN apt update && apt install -y python3-pip \
                                  python3-rosdep \
