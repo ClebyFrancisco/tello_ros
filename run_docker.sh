@@ -7,7 +7,7 @@ docker run -it \
            --net=host \
            --env="DISPLAY" \
            --volume="$HOME/.Xauthority:/root/.Xauthority:rw" \
-           --volume="$HOME/Documents/projeto_tcc:/root/tello_ros_ws/src/tello_ros2_packages:rw" \
+           --volume="$HOME/Documents/projeto_tcc:/root/tello_ros_ws/src:rw" \
            -e QT_X11_NO_MITSHM=1 \
            dji_tello_2 \
            bash

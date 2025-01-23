@@ -26,7 +26,7 @@ RUN apt install -y ros-foxy-gazebo-ros-pkgs
 
 RUN mkdir -p ~/tello_ros_ws/src && cd ~/tello_ros_ws/src && git clone https://github.com/FelipMa/tello_ros2_packages.git
 
-RUN . /opt/ros/${ROS_DISTRO}/setup.sh && cd ~/tello_ros_ws && colcon build --event-handlers console_direct+
+RUN . /opt/ros/${ROS_DISTRO}/setup.sh && cd ~/tello_ros_ws && colcon build --event-handlers console_direct+ --symlink-install
 RUN cd ~/tello_ros_ws && rosdep install --from-paths src -y --ignore-src
 
 #  Source environments
